@@ -1,0 +1,15 @@
+PROJETO SHAPE — v2.0 (Azul & Preto Edition)
+
+O que foi melhorado e corrigido:
+- Novo design moderno em Azul Elétrico e Preto Profundo
+- Sincronização dinâmica do Nome, Altura e Objetivo no painel inicial
+- Data local corrigida (sem bug de fuso horário à noite)
+- Compressão automática de fotos antes de salvar (evita estourar o limite de memória do Safari/Chrome)
+- Histórico completo de medidas corporais com opção de exclusão individual
+- Exclusão individual de refeições, treinos e pesos
+- Ícones PWA atualizados nas cores azul e preto
+
+COMO INSTALAR NO CELULAR COMO APLICATIVO (PWA):
+1. Envie todos os arquivos desta pasta para um servidor HTTPS gratuito (como Vercel, Netlify ou GitHub Pages).
+2. No iPhone (Safari): acesse o link HTTPS > toque em Compartilhar > "Adicionar à Tela de Início".
+3. No Android (Chrome): acesse o link HTTPS > toque nos três pontinhos > "Instalar aplicativo".
