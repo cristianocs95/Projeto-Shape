@@ -1,0 +1,7 @@
+PROJETO SHAPE — v4.0 (Edição Comercial Pronta para Venda)
+
+Novidades desta versão:
+- Tela de Apresentação / Vendas profissional antes do acesso ao app
+- Descrição detalhada dos benefícios do aplicativo (fichas personalizadas, diário alimentar, evolução, fotos)
+- Sistema integrado de pagamento via PIX com a chave (11994074416) e botão direto para envio de comprovante no WhatsApp
+- Ativação de licença integrada e botão de bloqueio em Ajustes
