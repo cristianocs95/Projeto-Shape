@@ -269,6 +269,21 @@ function checkAuth() {
   }
 }
 
+function calculateGoalProgress() {
+
+  const currentWeight = Number(data.weight);
+
+  const targetWeight = Number(data.targetWeight);
+
+  const diff = targetWeight - currentWeight;
+
+  return {
+    currentWeight,
+    targetWeight,
+    remaining: diff
+  };
+
+}
 function render() {
   if (!data.isActivated) return;
 
