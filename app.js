@@ -1,6 +1,39 @@
 const KEY = "projetoShape_v4";
 
 const TEMPLATES = {
+  const EXERCISE_DB = {
+  chest: [
+    "Supino Reto",
+    "Supino Inclinado",
+    "Supino Halteres",
+    "Crucifixo",
+    "Peck Deck",
+    "Cross Over"
+  ],
+
+  back: [
+    "Puxada Frontal",
+    "Barra Fixa",
+    "Remada Curvada",
+    "Serrote",
+    "Pullover"
+  ],
+
+  legs: [
+    "Agachamento Livre",
+    "Leg Press",
+    "Afundo",
+    "Stiff",
+    "Hack Squat"
+  ],
+
+  shoulders: [
+    "Desenvolvimento Militar",
+    "Arnold Press",
+    "Elevação Lateral",
+    "Face Pull"
+  ]
+};
   futsal: {
     name: "Híbrido Musculação + Futsal",
     days: [
