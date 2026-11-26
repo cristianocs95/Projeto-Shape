@@ -86,14 +86,34 @@ function cloneRoutine(templateKey, customName) {
 
 const initialRoutine = cloneRoutine("futsal", "Híbrido Musculação + Futsal");
 
-const defaults = {
+const defaults =const defaults = {
   isActivated: false,
+
   name: "Cristiano",
-  weight: 76.0,
+  age: 30,
+  gender: "Masculino",
+
+  weight: 76,
   height: 173,
+
+  bodyFat: 15,
+
+  activityLevel: "Moderado",
+  experience: "Intermediário",
+  daysPerWeek: 5,
+
   goal: "Hipertrofia",
+
+  targetWeight: 82,
+  targetBodyFat: 12,
+
+  goals: [],
+  achievements: [],
+  exerciseHistory: [],
+
   routines: [initialRoutine],
   activeRoutineId: initialRoutine.id,
+
   foods: [],
   weights: [],
   workouts: [],
