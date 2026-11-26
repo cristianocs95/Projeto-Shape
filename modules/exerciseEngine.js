@@ -1,0 +1,1 @@
+export function generateWorkout(profile){return {goal:profile.goal};}

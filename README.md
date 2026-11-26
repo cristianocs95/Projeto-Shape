@@ -1,0 +1,1 @@
+Sprint 1: perfil atleta, metas, banco exercicios, gerador treino.

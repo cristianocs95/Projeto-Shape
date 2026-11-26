@@ -1,0 +1,1 @@
+export const profileFields=["age","weight","height","goal","daysPerWeek","experience"];

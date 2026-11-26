@@ -1,0 +1,8 @@
+{
+  "hypertrophy": {
+    "monthlyKg": "0.5-1"
+  },
+  "fatloss": {
+    "weeklyKg": "0.4-0.8"
+  }
+}

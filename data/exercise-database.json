@@ -1,0 +1,1262 @@
+[
+  {
+    "id": "chest_001",
+    "muscle": "chest",
+    "name": "Chest Exercise 1",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_002",
+    "muscle": "chest",
+    "name": "Chest Exercise 2",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_003",
+    "muscle": "chest",
+    "name": "Chest Exercise 3",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_004",
+    "muscle": "chest",
+    "name": "Chest Exercise 4",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_005",
+    "muscle": "chest",
+    "name": "Chest Exercise 5",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_006",
+    "muscle": "chest",
+    "name": "Chest Exercise 6",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_007",
+    "muscle": "chest",
+    "name": "Chest Exercise 7",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_008",
+    "muscle": "chest",
+    "name": "Chest Exercise 8",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_009",
+    "muscle": "chest",
+    "name": "Chest Exercise 9",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_010",
+    "muscle": "chest",
+    "name": "Chest Exercise 10",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_011",
+    "muscle": "chest",
+    "name": "Chest Exercise 11",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_012",
+    "muscle": "chest",
+    "name": "Chest Exercise 12",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_013",
+    "muscle": "chest",
+    "name": "Chest Exercise 13",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_014",
+    "muscle": "chest",
+    "name": "Chest Exercise 14",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_015",
+    "muscle": "chest",
+    "name": "Chest Exercise 15",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_016",
+    "muscle": "chest",
+    "name": "Chest Exercise 16",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_017",
+    "muscle": "chest",
+    "name": "Chest Exercise 17",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_018",
+    "muscle": "chest",
+    "name": "Chest Exercise 18",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_019",
+    "muscle": "chest",
+    "name": "Chest Exercise 19",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_020",
+    "muscle": "chest",
+    "name": "Chest Exercise 20",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_021",
+    "muscle": "chest",
+    "name": "Chest Exercise 21",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_022",
+    "muscle": "chest",
+    "name": "Chest Exercise 22",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_023",
+    "muscle": "chest",
+    "name": "Chest Exercise 23",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_024",
+    "muscle": "chest",
+    "name": "Chest Exercise 24",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_025",
+    "muscle": "chest",
+    "name": "Chest Exercise 25",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_026",
+    "muscle": "chest",
+    "name": "Chest Exercise 26",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_027",
+    "muscle": "chest",
+    "name": "Chest Exercise 27",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_028",
+    "muscle": "chest",
+    "name": "Chest Exercise 28",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_029",
+    "muscle": "chest",
+    "name": "Chest Exercise 29",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "chest_030",
+    "muscle": "chest",
+    "name": "Chest Exercise 30",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_001",
+    "muscle": "back",
+    "name": "Back Exercise 1",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_002",
+    "muscle": "back",
+    "name": "Back Exercise 2",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_003",
+    "muscle": "back",
+    "name": "Back Exercise 3",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_004",
+    "muscle": "back",
+    "name": "Back Exercise 4",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_005",
+    "muscle": "back",
+    "name": "Back Exercise 5",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_006",
+    "muscle": "back",
+    "name": "Back Exercise 6",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_007",
+    "muscle": "back",
+    "name": "Back Exercise 7",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_008",
+    "muscle": "back",
+    "name": "Back Exercise 8",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_009",
+    "muscle": "back",
+    "name": "Back Exercise 9",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_010",
+    "muscle": "back",
+    "name": "Back Exercise 10",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_011",
+    "muscle": "back",
+    "name": "Back Exercise 11",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_012",
+    "muscle": "back",
+    "name": "Back Exercise 12",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_013",
+    "muscle": "back",
+    "name": "Back Exercise 13",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_014",
+    "muscle": "back",
+    "name": "Back Exercise 14",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_015",
+    "muscle": "back",
+    "name": "Back Exercise 15",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_016",
+    "muscle": "back",
+    "name": "Back Exercise 16",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_017",
+    "muscle": "back",
+    "name": "Back Exercise 17",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_018",
+    "muscle": "back",
+    "name": "Back Exercise 18",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_019",
+    "muscle": "back",
+    "name": "Back Exercise 19",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_020",
+    "muscle": "back",
+    "name": "Back Exercise 20",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_021",
+    "muscle": "back",
+    "name": "Back Exercise 21",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_022",
+    "muscle": "back",
+    "name": "Back Exercise 22",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_023",
+    "muscle": "back",
+    "name": "Back Exercise 23",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_024",
+    "muscle": "back",
+    "name": "Back Exercise 24",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_025",
+    "muscle": "back",
+    "name": "Back Exercise 25",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_026",
+    "muscle": "back",
+    "name": "Back Exercise 26",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_027",
+    "muscle": "back",
+    "name": "Back Exercise 27",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_028",
+    "muscle": "back",
+    "name": "Back Exercise 28",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_029",
+    "muscle": "back",
+    "name": "Back Exercise 29",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "back_030",
+    "muscle": "back",
+    "name": "Back Exercise 30",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_001",
+    "muscle": "legs",
+    "name": "Legs Exercise 1",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_002",
+    "muscle": "legs",
+    "name": "Legs Exercise 2",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_003",
+    "muscle": "legs",
+    "name": "Legs Exercise 3",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_004",
+    "muscle": "legs",
+    "name": "Legs Exercise 4",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_005",
+    "muscle": "legs",
+    "name": "Legs Exercise 5",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_006",
+    "muscle": "legs",
+    "name": "Legs Exercise 6",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_007",
+    "muscle": "legs",
+    "name": "Legs Exercise 7",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_008",
+    "muscle": "legs",
+    "name": "Legs Exercise 8",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_009",
+    "muscle": "legs",
+    "name": "Legs Exercise 9",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_010",
+    "muscle": "legs",
+    "name": "Legs Exercise 10",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_011",
+    "muscle": "legs",
+    "name": "Legs Exercise 11",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_012",
+    "muscle": "legs",
+    "name": "Legs Exercise 12",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_013",
+    "muscle": "legs",
+    "name": "Legs Exercise 13",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_014",
+    "muscle": "legs",
+    "name": "Legs Exercise 14",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_015",
+    "muscle": "legs",
+    "name": "Legs Exercise 15",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_016",
+    "muscle": "legs",
+    "name": "Legs Exercise 16",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_017",
+    "muscle": "legs",
+    "name": "Legs Exercise 17",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_018",
+    "muscle": "legs",
+    "name": "Legs Exercise 18",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_019",
+    "muscle": "legs",
+    "name": "Legs Exercise 19",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_020",
+    "muscle": "legs",
+    "name": "Legs Exercise 20",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_021",
+    "muscle": "legs",
+    "name": "Legs Exercise 21",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_022",
+    "muscle": "legs",
+    "name": "Legs Exercise 22",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_023",
+    "muscle": "legs",
+    "name": "Legs Exercise 23",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_024",
+    "muscle": "legs",
+    "name": "Legs Exercise 24",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_025",
+    "muscle": "legs",
+    "name": "Legs Exercise 25",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_026",
+    "muscle": "legs",
+    "name": "Legs Exercise 26",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_027",
+    "muscle": "legs",
+    "name": "Legs Exercise 27",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_028",
+    "muscle": "legs",
+    "name": "Legs Exercise 28",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_029",
+    "muscle": "legs",
+    "name": "Legs Exercise 29",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "legs_030",
+    "muscle": "legs",
+    "name": "Legs Exercise 30",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_001",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 1",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_002",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 2",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_003",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 3",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_004",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 4",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_005",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 5",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_006",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 6",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_007",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 7",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_008",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 8",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_009",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 9",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_010",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 10",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_011",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 11",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_012",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 12",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_013",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 13",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_014",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 14",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_015",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 15",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_016",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 16",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_017",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 17",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_018",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 18",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_019",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 19",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_020",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 20",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_021",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 21",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_022",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 22",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_023",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 23",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_024",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 24",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_025",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 25",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_026",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 26",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_027",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 27",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_028",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 28",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_029",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 29",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "shoulders_030",
+    "muscle": "shoulders",
+    "name": "Shoulders Exercise 30",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_001",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 1",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_002",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 2",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_003",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 3",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_004",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 4",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_005",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 5",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_006",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 6",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_007",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 7",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_008",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 8",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_009",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 9",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_010",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 10",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_011",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 11",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_012",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 12",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_013",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 13",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_014",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 14",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_015",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 15",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_016",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 16",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_017",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 17",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_018",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 18",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_019",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 19",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_020",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 20",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_021",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 21",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_022",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 22",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_023",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 23",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_024",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 24",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_025",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 25",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_026",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 26",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_027",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 27",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_028",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 28",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_029",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 29",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "biceps_030",
+    "muscle": "biceps",
+    "name": "Biceps Exercise 30",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_001",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 1",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_002",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 2",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_003",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 3",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_004",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 4",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_005",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 5",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_006",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 6",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_007",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 7",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_008",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 8",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_009",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 9",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_010",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 10",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_011",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 11",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_012",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 12",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_013",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 13",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_014",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 14",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_015",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 15",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_016",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 16",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_017",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 17",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_018",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 18",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_019",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 19",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_020",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 20",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_021",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 21",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_022",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 22",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_023",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 23",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_024",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 24",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_025",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 25",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_026",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 26",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_027",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 27",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_028",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 28",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_029",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 29",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "triceps_030",
+    "muscle": "triceps",
+    "name": "Triceps Exercise 30",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_001",
+    "muscle": "abs",
+    "name": "Abs Exercise 1",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_002",
+    "muscle": "abs",
+    "name": "Abs Exercise 2",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_003",
+    "muscle": "abs",
+    "name": "Abs Exercise 3",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_004",
+    "muscle": "abs",
+    "name": "Abs Exercise 4",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_005",
+    "muscle": "abs",
+    "name": "Abs Exercise 5",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_006",
+    "muscle": "abs",
+    "name": "Abs Exercise 6",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_007",
+    "muscle": "abs",
+    "name": "Abs Exercise 7",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_008",
+    "muscle": "abs",
+    "name": "Abs Exercise 8",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_009",
+    "muscle": "abs",
+    "name": "Abs Exercise 9",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_010",
+    "muscle": "abs",
+    "name": "Abs Exercise 10",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_011",
+    "muscle": "abs",
+    "name": "Abs Exercise 11",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_012",
+    "muscle": "abs",
+    "name": "Abs Exercise 12",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_013",
+    "muscle": "abs",
+    "name": "Abs Exercise 13",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_014",
+    "muscle": "abs",
+    "name": "Abs Exercise 14",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_015",
+    "muscle": "abs",
+    "name": "Abs Exercise 15",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_016",
+    "muscle": "abs",
+    "name": "Abs Exercise 16",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_017",
+    "muscle": "abs",
+    "name": "Abs Exercise 17",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_018",
+    "muscle": "abs",
+    "name": "Abs Exercise 18",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_019",
+    "muscle": "abs",
+    "name": "Abs Exercise 19",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_020",
+    "muscle": "abs",
+    "name": "Abs Exercise 20",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_021",
+    "muscle": "abs",
+    "name": "Abs Exercise 21",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_022",
+    "muscle": "abs",
+    "name": "Abs Exercise 22",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_023",
+    "muscle": "abs",
+    "name": "Abs Exercise 23",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_024",
+    "muscle": "abs",
+    "name": "Abs Exercise 24",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_025",
+    "muscle": "abs",
+    "name": "Abs Exercise 25",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_026",
+    "muscle": "abs",
+    "name": "Abs Exercise 26",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_027",
+    "muscle": "abs",
+    "name": "Abs Exercise 27",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_028",
+    "muscle": "abs",
+    "name": "Abs Exercise 28",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_029",
+    "muscle": "abs",
+    "name": "Abs Exercise 29",
+    "rotationWeeks": 8
+  },
+  {
+    "id": "abs_030",
+    "muscle": "abs",
+    "name": "Abs Exercise 30",
+    "rotationWeeks": 8
+  }
+]
