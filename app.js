@@ -184,7 +184,7 @@ function getActiveRoutine() {
 function persist() {
   try {
     localStorage.setItem(KEY, JSON.stringify(data));
-    render();
+    render() const progress = calculateGoalProgress()} catch (e) {notify ("Peso Atual, Peso Meta ,Diferença") ;
   } catch (e) {
     notify("Armazenamento cheio! Exporte um backup e apague fotos antigas.", true);
   }
@@ -282,6 +282,36 @@ function calculateGoalProgress() {
     targetWeight,
     remaining: diff
   };
+
+}
+
+function generateWorkoutByGoal() {
+
+  switch(data.goal){
+
+    case "Hipertrofia":
+      return cloneRoutine("abc");
+
+    case "Emagrecimento":
+      return cloneRoutine("emagrecimento");
+
+    case "Condicionamento":
+      return cloneRoutine("fullbody");
+
+    default:
+      return cloneRoutine("ab");
+
+  }
+
+}
+
+function shouldRotateExercises(){
+
+  if(data.workouts.length < 40){
+    return false;
+  }
+
+  return true;
 
 }
 function render() {
@@ -532,7 +562,11 @@ function saveWorkout() {
   persist();
   notify("Treino registrado com sucesso!");
 }
-
+if(shouldRotateExercises()){
+   notify(
+      "Novo ciclo disponível. Atualize sua ficha."
+   );
+}
 function deleteWorkout(index) {
   if (confirm("Remover este registro de treino?")) {
     data.workouts.splice(index, 1);
