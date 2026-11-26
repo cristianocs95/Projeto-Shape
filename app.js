@@ -729,6 +729,11 @@ function resetData() {
     notify("Dados apagados.");
   }
 }
+data.exerciseHistory = [];
+data.exerciseHistory.push({
+   date: today(),
+   workout: name
+});
 
 document.getElementById("weightDate").value = today();
 document.getElementById("photoDate").value = today();
