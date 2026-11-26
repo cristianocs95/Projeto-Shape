@@ -26,7 +26,6 @@ body {
   min-height: 100vh;
 }
 
-/* Tela de Vendas / Login */
 .auth-screen {
   min-height: 100vh;
   display: flex;
@@ -646,7 +645,6 @@ nav {
   color: var(--blue-bright);
 }
 
-/* Modal */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -696,4 +694,175 @@ nav {
 @media (min-width: 600px) {
   main { padding: 30px; }
   .photos { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ===== v5: exercícios, programa e metas ===== */
+.day-exercises {
+  white-space: normal;
+}
+
+.ex-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.ex-row.plain {
+  cursor: inherit;
+  padding: 4px 0;
+}
+
+.ex-thumb {
+  width: 64px;
+  height: 48px;
+  flex-shrink: 0;
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+}
+
+.ex-thumb svg,
+.ex-figure svg,
+.ex-frames svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.ex-text {
+  flex: 1;
+  font-size: 13px;
+  color: #cbd5e1;
+  line-height: 1.35;
+}
+
+.ex-info {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--blue-bright);
+  white-space: nowrap;
+}
+
+.modal-box {
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+.ex-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 6px 0 10px;
+}
+
+.ex-figure {
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.ex-frames {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.ex-frames > div {
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 4px 4px 6px;
+  text-align: center;
+}
+
+.ex-frames svg {
+  aspect-ratio: 4 / 3;
+  height: auto;
+}
+
+.ex-frames small {
+  font-size: 10px;
+}
+
+.ex-steps {
+  margin: 4px 0 0;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.ex-mistake {
+  font-size: 12px;
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin: 10px 0 0;
+}
+
+.progress {
+  height: 8px;
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress > i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--blue-bright));
+  border-radius: 8px;
+}
+
+.phase-box {
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.phase-box p {
+  margin: 4px 0 0;
+  color: #cbd5e1;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.goal-row {
+  font-size: 13px;
+  color: #cbd5e1;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.4;
+}
+
+.goal-row:last-of-type {
+  border-bottom: none;
+}
+
+.goal-row b {
+  color: #fff;
+}
+
+.goal-row i {
+  color: var(--muted);
+  font-style: normal;
+  font-size: 11px;
+}
+
+.goal-row .progress {
+  margin-top: 6px;
 }

@@ -9,12 +9,12 @@
   <meta name="apple-mobile-web-app-title" content="Projeto Shape">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-192.png">
-  <title>Projeto Shape</title>
+  <title>Projeto Shape — Seu Corpo, Sua Evolução</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- TELA DE LOGIN / VENDAS (Exibida se o app não estiver ativado) -->
+  <!-- TELA DE VENDAS / LANDING PAGE (Exibida se o app não estiver ativado) -->
   <div id="authScreen" class="auth-screen">
     <div class="auth-container">
       <div class="brand center-brand">
@@ -26,23 +26,29 @@
       </div>
 
       <div class="card sales-card">
+        <span class="pill" style="margin-bottom: 10px; display: inline-block;">LANÇAMENTO OFICIAL</span>
         <h1>Transforme sua <em>performance física</em></h1>
-        <p class="muted">O aplicativo definitivo para gerenciar seus treinos personalizados, fichas de musculação, futsal, diário alimentar e acompanhamento de peso e medidas corporais.</p>
+        <p class="muted">O aplicativo definitivo para gerenciar seus treinos personalizados, fichas de musculação, futsal, diário alimentar, calorias e acompanhamento de peso e medidas corporais.</p>
         
         <div class="features-list">
-          <div>✓ Múltiplas fichas e modelos prontos</div>
-          <div>✓ Diário alimentar e controle de proteínas</div>
-          <div>✓ Histórico de peso, medidas e fotos</div>
-          <div>✓ 100% offline e privado no seu celular</div>
+          <div>✓ Múltiplas fichas e modelos prontos (ABC, Futsal, Fullbody)</div>
+          <div>✓ Diário alimentar e controle preciso de proteínas</div>
+          <div>✓ Histórico completo de peso, medidas e fotos de progresso</div>
+          <div>✓ 100% offline, privado e rápido no seu celular</div>
         </div>
 
         <div class="pricing-box">
           <small>ACESSO VITALÍCIO COMPLETO</small>
           <div class="price">R$ 29<span>,90</span></div>
+          <p class="muted" style="font-size:12px;margin:4px 0 0">Pagamento único via PIX. Liberação imediata!</p>
         </div>
 
-        <button class="primary" onclick="openPixModal()">Realizar Pagamento via PIX</button>
-        <button class="secondary" onclick="simulateActivation()">Já fiz o pagamento / Ativar App</button>
+        <button class="primary" onclick="openPixModal()">Comprar Acesso via PIX</button>
+        <button class="secondary" onclick="openActivateModal()">Já tenho uma Chave de Acesso</button>
+        
+        <div style="margin-top: 20px; border-top: 1px solid var(--line); padding-top: 14px;">
+          <button class="textbtn" style="width:100%;text-align:center;color:var(--muted)" onclick="openAdminModal()">🔒 Área do Administrador</button>
+        </div>
       </div>
     </div>
   </div>
@@ -54,7 +60,7 @@
         <h2>Pagamento via PIX</h2>
         <button class="textbtn" onclick="closePixModal()">✕</button>
       </div>
-      <p class="muted" style="font-size:13px;margin-bottom:12px">Escaneie o QR Code ou utilize a chave PIX celular abaixo para efetuar o pagamento. Após o pagamento, envie o comprovante para liberação imediata.</p>
+      <p class="muted" style="font-size:13px;margin-bottom:12px">Copie a chave PIX celular abaixo ou utilize o WhatsApp para enviar o comprovante e receber sua chave de liberação.</p>
       
       <div class="pix-key-box">
         <small>CHAVE PIX (CELULAR)</small>
@@ -64,7 +70,52 @@
 
       <a href="https://wa.me/5511994074416?text=Olá!%20Realizei%20o%20pagamento%20do%20Projeto%20Shape%20e%20segue%20o%20comprovante." target="_blank" class="primary" style="display:block;text-align:center;text-decoration:none;margin-top:14px">Enviar Comprovante via WhatsApp</a>
       
-      <button class="secondary" style="margin-top:8px" onclick="simulateActivation()">Liberar Acesso (Modo Teste)</button>
+      <button class="secondary" style="margin-top:8px" onclick="closePixModal()">Voltar</button>
+    </div>
+  </div>
+
+  <!-- MODAL ATIVAÇÃO COM CHAVE -->
+  <div id="activateModal" class="modal-backdrop" style="display:none">
+    <div class="modal-box">
+      <div class="cardhead">
+        <h2>Ativar Aplicativo</h2>
+        <button class="textbtn" onclick="closeActivateModal()">✕</button>
+      </div>
+      <p class="muted" style="font-size:13px;margin-bottom:12px">Digite a chave de acesso fornecida pelo administrador após a confirmação do pagamento.</p>
+      
+      <label for="activationKeyInput">Chave de Acesso</label>
+      <input id="activationKeyInput" placeholder="Ex.: SHAPE-8X99-2026">
+
+      <button class="primary" onclick="activateWithKey()">Ativar Acesso</button>
+      <button class="secondary" style="margin-top:8px" onclick="closeActivateModal()">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- MODAL ADMIN -->
+  <div id="adminModal" class="modal-backdrop" style="display:none">
+    <div class="modal-box">
+      <div class="cardhead">
+        <h2>Painel Admin</h2>
+        <button class="textbtn" onclick="closeAdminModal()">✕</button>
+      </div>
+      
+      <div id="adminLoginView">
+        <p class="muted" style="font-size:13px;margin-bottom:12px">Digite a senha administrativa para gerar chaves de acesso para clientes.</p>
+        <label for="adminPassInput">Senha Admin</label>
+        <input id="adminPassInput" type="password" placeholder="Senha">
+        <button class="primary" onclick="loginAdmin()">Entrar no Painel</button>
+      </div>
+
+      <div id="adminDashboardView" style="display:none">
+        <p class="eyebrow" style="margin-bottom:8px">GERADOR DE CHAVES</p>
+        <button class="primary" onclick="generateActivationKey()">Gerar Nova Chave de Acesso</button>
+        
+        <label style="margin-top:14px">Chaves Geradas Recentemente</label>
+        <div id="generatedKeysList" class="history" style="max-height: 150px; overflow-y: auto; background: var(--panel2); padding: 10px; border-radius: 10px; margin-top: 6px;"></div>
+
+        <button class="secondary" style="margin-top:14px" onclick="adminQuickActivate()">Liberar este aparelho agora (Admin)</button>
+        <button class="danger" style="margin-top:8px" onclick="logoutAdmin()">Sair do Painel</button>
+      </div>
     </div>
   </div>
 
@@ -78,7 +129,7 @@
           <small>SEU CORPO. SUA EVOLUÇÃO.</small>
         </div>
       </div>
-      <span class="local"><span class="dot"></span> DADOS LOCAIS</span>
+      <span class="local"><span class="dot"></span> LICENCIADO</span>
     </header>
 
     <main>
@@ -130,8 +181,11 @@
               <small>proteína total</small>
             </div>
           </div>
+          <p class="muted" id="proteinGoal" style="font-size:12px;margin:4px 0 0"></p>
           <button class="secondary" onclick="showPage('alimentacao')">Registrar refeição</button>
         </div>
+
+        <div id="homeProgram"></div>
 
         <p class="footnote">Os dados ficam salvos localmente no navegador deste dispositivo. Faça backups regulares em Ajustes.</p>
       </section>
@@ -150,8 +204,11 @@
             <select id="activeRoutineSelect" onchange="switchRoutine(this.value)"></select>
             <button class="icon-btn danger-text" title="Excluir ficha atual" onclick="deleteCurrentRoutine()">✕</button>
           </div>
+          <button class="primary" onclick="openProgramModal()">✨ Treino inteligente por objetivo</button>
           <p class="muted" style="font-size:12px;margin:8px 0 0">Toque em qualquer dia da semana abaixo para editar o treino e os exercícios.</p>
         </div>
+
+        <div id="programCard"></div>
 
         <div id="weekPlan" class="stack"></div>
 
@@ -208,6 +265,8 @@
             <strong id="proteinTotal">0 <i>g</i></strong>
           </article>
         </div>
+
+        <p class="muted" id="foodGoal" style="font-size:12px;margin:0 2px"></p>
 
         <div class="card">
           <h2>Adicionar refeição</h2>
@@ -339,7 +398,7 @@
           <button class="secondary" onclick="importData()">Restaurar dados</button>
           <button class="danger" onclick="resetData()">Apagar todos os dados do app</button>
         </div>
-        <p class="footnote">Projeto Shape • v4.0 • Edição Comercial • Azul & Preto</p>
+        <p class="footnote">Projeto Shape • v5.0 • Edição Comercial • Azul & Preto</p>
       </section>
     </main>
 
@@ -365,6 +424,91 @@
 
         <button class="primary" onclick="createNewRoutine()">Criar ficha</button>
       </div>
+    </div>
+
+    <!-- MODAL: TREINO INTELIGENTE -->
+    <div id="programModal" class="modal-backdrop" style="display:none">
+      <div class="modal-box">
+        <div class="cardhead">
+          <h2>✨ Treino inteligente</h2>
+          <button class="textbtn" onclick="closeProgramModal()">✕</button>
+        </div>
+        <p class="muted" style="font-size:12px;margin:0 0 4px">Responda abaixo e o app monta sua ficha, define metas para 8 semanas e troca os exercícios a cada novo ciclo.</p>
+
+        <label for="pgGoal">Objetivo</label>
+        <select id="pgGoal">
+          <option value="Hipertrofia">Hipertrofia (ganhar massa)</option>
+          <option value="Emagrecimento">Emagrecimento / definição</option>
+          <option value="Condicionamento">Condicionamento físico</option>
+          <option value="Força">Força</option>
+          <option value="Manutenção">Manutenção</option>
+        </select>
+
+        <div class="two">
+          <div>
+            <label for="pgLevel">Nível</label>
+            <select id="pgLevel">
+              <option value="iniciante">Iniciante</option>
+              <option value="intermediario">Intermediário</option>
+              <option value="avancado">Avançado</option>
+            </select>
+          </div>
+          <div>
+            <label for="pgDays">Dias de treino/semana</label>
+            <select id="pgDays">
+              <option value="2">2 dias</option><option value="3">3 dias</option><option value="4">4 dias</option>
+              <option value="5">5 dias</option><option value="6">6 dias</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="two">
+          <div>
+            <label for="pgPlace">Onde treina</label>
+            <select id="pgPlace">
+              <option value="academia">Academia</option>
+              <option value="casa">Em casa (halteres/peso do corpo)</option>
+            </select>
+          </div>
+          <div>
+            <label for="pgSportDays">Esporte fixo (dias)</label>
+            <select id="pgSportDays">
+              <option value="0">Nenhum</option><option value="1">1x por semana</option><option value="2">2x por semana</option>
+            </select>
+          </div>
+        </div>
+        <label for="pgSportName">Qual esporte? (opcional)</label>
+        <input id="pgSportName" placeholder="Ex.: Futsal">
+
+        <div class="two">
+          <div>
+            <label for="pgWeight">Peso (kg)</label>
+            <input id="pgWeight" type="number" step="0.1" inputmode="decimal">
+          </div>
+          <div>
+            <label for="pgHeight">Altura (cm)</label>
+            <input id="pgHeight" type="number" inputmode="numeric">
+          </div>
+        </div>
+        <div class="two">
+          <div>
+            <label for="pgAge">Idade (opcional)</label>
+            <input id="pgAge" type="number" inputmode="numeric" placeholder="Para estimar calorias">
+          </div>
+          <div>
+            <label for="pgSex">Sexo</label>
+            <select id="pgSex"><option value="M">Masculino</option><option value="F">Feminino</option></select>
+          </div>
+        </div>
+
+        <button class="primary" onclick="generateProgramFromModal()">Gerar meu programa</button>
+        <button class="secondary" onclick="closeProgramModal()">Cancelar</button>
+      </div>
+    </div>
+
+    <!-- MODAL: DETALHE DO EXERCÍCIO -->
+    <div id="exerciseModal" class="modal-backdrop" style="display:none" onclick="if(event.target===this)closeExerciseModal()">
+      <div class="modal-box" id="exerciseBody"></div>
     </div>
 
     <nav>
@@ -396,6 +540,8 @@
   </div>
 
   <div id="toast" class="toast"></div>
+  <script src="exercises.js"></script>
+  <script src="planner.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

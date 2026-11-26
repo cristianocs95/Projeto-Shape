@@ -1,3 +1,13 @@
+PROJETO SHAPE — v5.0
+
+Novidades da v5.0:
+- Treino inteligente: gera a ficha com base em objetivo, nível, dias por semana, local (academia/casa), esporte fixo, peso, altura, idade e sexo
+- Ciclos de 8 semanas (2 meses) com metas: peso alvo, treinos concluídos, proteína e calorias diárias (estimativa)
+- A cada ciclo, o app renova a ficha com novos exercícios para os mesmos músculos (Fase 1, 2, 3...)
+- Ilustrações animadas de cada exercício: toque em qualquer exercício da ficha para ver o movimento e a execução
+- Arquivos novos: exercises.js e planner.js (envie junto com os demais)
+
+--- Versão anterior ---
 PROJETO SHAPE — v4.0 (Edição Comercial Pronta para Venda)
 
 Novidades desta versão:

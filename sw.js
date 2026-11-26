@@ -1,8 +1,10 @@
-const CACHE = "projeto-shape-v4";
+const CACHE = "projeto-shape-v5";
 const ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
+  "./exercises.js",
+  "./planner.js",
   "./app.js",
   "./manifest.webmanifest",
   "./icon-192.png",

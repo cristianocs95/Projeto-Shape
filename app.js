@@ -1,39 +1,7 @@
-const KEY = "projetoShape_v4";
+const KEY = "projetoShape_v41";
+const ADMIN_PASS = "admin2026";
 
 const TEMPLATES = {
-  const EXERCISE_DB = {
-  chest: [
-    "Supino Reto",
-    "Supino Inclinado",
-    "Supino Halteres",
-    "Crucifixo",
-    "Peck Deck",
-    "Cross Over"
-  ],
-
-  back: [
-    "Puxada Frontal",
-    "Barra Fixa",
-    "Remada Curvada",
-    "Serrote",
-    "Pullover"
-  ],
-
-  legs: [
-    "Agachamento Livre",
-    "Leg Press",
-    "Afundo",
-    "Stiff",
-    "Hack Squat"
-  ],
-
-  shoulders: [
-    "Desenvolvimento Militar",
-    "Arnold Press",
-    "Elevação Lateral",
-    "Face Pull"
-  ]
-};
   futsal: {
     name: "Híbrido Musculação + Futsal",
     days: [
@@ -119,39 +87,27 @@ function cloneRoutine(templateKey, customName) {
 
 const initialRoutine = cloneRoutine("futsal", "Híbrido Musculação + Futsal");
 
-const defaults =const defaults = {
+const defaults = {
   isActivated: false,
-
   name: "Cristiano",
-  age: 30,
-  gender: "Masculino",
-
-  weight: 76,
+  weight: 76.0,
   height: 173,
-
-  bodyFat: 15,
-
-  activityLevel: "Moderado",
-  experience: "Intermediário",
-  daysPerWeek: 5,
-
   goal: "Hipertrofia",
-
-  targetWeight: 82,
-  targetBodyFat: 12,
-
-  goals: [],
-  achievements: [],
-  exerciseHistory: [],
-
   routines: [initialRoutine],
   activeRoutineId: initialRoutine.id,
-
   foods: [],
   weights: [],
   workouts: [],
   photos: [],
-  measures: []
+  measures: [],
+  level: "intermediario",
+  trainDays: 4,
+  place: "academia",
+  sportDays: 0,
+  sportName: "",
+  age: "",
+  sex: "M",
+  validKeys: ["SHAPE-2026-VIP", "SHAPE-CRISTIANO"]
 };
 
 let data = load();
@@ -159,18 +115,10 @@ let editingDayIndex = null;
 
 function load() {
   try {
-    const raw = localStorage.getItem(KEY) || localStorage.getItem("projetoShape_v3") || localStorage.getItem("projetoShape_v2") || localStorage.getItem("projetoShape_v1");
+    const raw = localStorage.getItem(KEY) || localStorage.getItem("projetoShape_v4") || localStorage.getItem("projetoShape_v3");
     if (!raw) return { ...defaults };
     const parsed = JSON.parse(raw);
-
-    if (parsed.measures && !Array.isArray(parsed.measures)) {
-      parsed.measures = parsed.measures.date ? [parsed.measures] : [];
-    }
-    if (!parsed.routines || !Array.isArray(parsed.routines) || !parsed.routines.length) {
-      const defRt = cloneRoutine("futsal", "Híbrido Musculação + Futsal");
-      parsed.routines = [defRt];
-      parsed.activeRoutineId = defRt.id;
-    }
+    if (!parsed.validKeys) parsed.validKeys = defaults.validKeys;
     return { ...defaults, ...parsed };
   } catch (e) {
     return { ...defaults };
@@ -184,18 +132,15 @@ function getActiveRoutine() {
 function persist() {
   try {
     localStorage.setItem(KEY, JSON.stringify(data));
-    render() const progress = calculateGoalProgress()} catch (e) {notify ("Peso Atual, Peso Meta ,Diferença") ;
+    render();
   } catch (e) {
-    notify("Armazenamento cheio! Exporte um backup e apague fotos antigas.", true);
+    notify("Armazenamento cheio!", true);
   }
 }
 
 function today() {
   const now = new Date();
-  const y = now.getFullYear();
-  const m = String(now.getMonth() + 1).padStart(2, "0");
-  const d = String(now.getDate()).padStart(2, "0");
-  return `${y}-${m}-${d}`;
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
 }
 
 function formatDateBR(iso) {
@@ -226,29 +171,91 @@ function showPage(id) {
 function openPixModal() {
   document.getElementById("pixModal").style.display = "flex";
 }
-
 function closePixModal() {
   document.getElementById("pixModal").style.display = "none";
 }
-
 function copyPixKey() {
-  navigator.clipboard.writeText("11994074416").then(() => {
-    notify("Chave PIX copiada com sucesso!");
-  }).catch(() => {
-    notify("Erro ao copiar chave.", true);
-  });
+  navigator.clipboard.writeText("11994074416").then(() => notify("Chave PIX copiada!"));
 }
 
-function simulateActivation() {
+function openActivateModal() {
+  document.getElementById("activateModal").style.display = "flex";
+}
+function closeActivateModal() {
+  document.getElementById("activateModal").style.display = "none";
+}
+
+function activateWithKey() {
+  const val = document.getElementById("activationKeyInput").value.trim().toUpperCase();
+  if (data.validKeys.includes(val) || val === "ADMIN2026") {
+    data.isActivated = true;
+    persist();
+    closeActivateModal();
+    notify("Aplicativo ativado com sucesso!");
+    checkAuth();
+  } else {
+    notify("Chave de acesso inválida.", true);
+  }
+}
+
+function openAdminModal() {
+  document.getElementById("adminModal").style.display = "flex";
+  document.getElementById("adminLoginView").style.display = "block";
+  document.getElementById("adminDashboardView").style.display = "none";
+  document.getElementById("adminPassInput").value = "";
+}
+function closeAdminModal() {
+  document.getElementById("adminModal").style.display = "none";
+}
+
+function loginAdmin() {
+  const pass = document.getElementById("adminPassInput").value;
+  if (pass === ADMIN_PASS) {
+    document.getElementById("adminLoginView").style.display = "none";
+    document.getElementById("adminDashboardView").style.display = "block";
+    renderAdminKeys();
+    notify("Painel Admin acessado!");
+  } else {
+    notify("Senha incorreta.", true);
+  }
+}
+
+function logoutAdmin() {
+  document.getElementById("adminLoginView").style.display = "block";
+  document.getElementById("adminDashboardView").style.display = "none";
+}
+
+function generateActivationKey() {
+  const rand = Math.random().toString(36).substring(2, 6).toUpperCase();
+  const newKey = `SHAPE-${rand}-${new Date().getFullYear()}`;
+  if (!data.validKeys.includes(newKey)) {
+    data.validKeys.push(newKey);
+    persist();
+  }
+  renderAdminKeys();
+  notify("Nova chave gerada!");
+}
+
+function renderAdminKeys() {
+  const list = document.getElementById("generatedKeysList");
+  list.innerHTML = data.validKeys.map(k => `
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);">
+      <code style="color:var(--blue-bright);font-weight:700;">${k}</code>
+      <button class="textbtn" onclick="navigator.clipboard.writeText('${k}').then(()=>notify('Chave copiada!'))">Copiar</button>
+    </div>
+  `).join("");
+}
+
+function adminQuickActivate() {
   data.isActivated = true;
   persist();
-  closePixModal();
-  notify("Aplicativo ativado com sucesso!");
+  closeAdminModal();
+  notify("Acesso liberado para este aparelho!");
   checkAuth();
 }
 
 function lockApp() {
-  if (confirm("Deseja bloquear o aplicativo e retornar à tela de vendas?")) {
+  if (confirm("Deseja bloquear o aplicativo e voltar à tela de vendas?")) {
     data.isActivated = false;
     persist();
     checkAuth();
@@ -269,51 +276,6 @@ function checkAuth() {
   }
 }
 
-function calculateGoalProgress() {
-
-  const currentWeight = Number(data.weight);
-
-  const targetWeight = Number(data.targetWeight);
-
-  const diff = targetWeight - currentWeight;
-
-  return {
-    currentWeight,
-    targetWeight,
-    remaining: diff
-  };
-
-}
-
-function generateWorkoutByGoal() {
-
-  switch(data.goal){
-
-    case "Hipertrofia":
-      return cloneRoutine("abc");
-
-    case "Emagrecimento":
-      return cloneRoutine("emagrecimento");
-
-    case "Condicionamento":
-      return cloneRoutine("fullbody");
-
-    default:
-      return cloneRoutine("ab");
-
-  }
-
-}
-
-function shouldRotateExercises(){
-
-  if(data.workouts.length < 40){
-    return false;
-  }
-
-  return true;
-
-}
 function render() {
   if (!data.isActivated) return;
 
@@ -323,8 +285,7 @@ function render() {
 
   document.getElementById("dashName").textContent = data.name || "Atleta";
   document.getElementById("dashWeight").innerHTML = `${Number(data.weight).toFixed(1).replace(".", ",")} <i>kg</i>`;
-  const hMeters = (Number(data.height || 173) / 100).toFixed(2).replace(".", ",");
-  document.getElementById("dashHeight").innerHTML = `${hMeters} <i>m</i>`;
+  document.getElementById("dashHeight").innerHTML = `${(Number(data.height || 173) / 100).toFixed(2).replace(".", ",")} <i>m</i>`;
   document.getElementById("dashGoal").textContent = data.goal || "Hipertrofia";
 
   const foodsToday = data.foods.filter(x => x.date === todayStr);
@@ -359,7 +320,7 @@ function render() {
           </div>
           <span class="tag ${tagClass}">${esc(x.tag)}</span>
         </div>
-        ${x.exercises ? `<div class="day-exercises">${esc(x.exercises)}</div>` : ""}
+        ${x.exercises ? `<div class="day-exercises">${renderExerciseList(x.exercises)}</div>` : ""}
         <span class="edit-hint">✎ Toque para editar dia e exercícios</span>
       </div>`;
   }).join("");
@@ -433,6 +394,8 @@ function render() {
       </small>
     </div>`).join("");
 
+  renderProgramCards();
+
   document.getElementById("profileName").value = data.name || "Cristiano";
   document.getElementById("profileHeight").value = data.height || 173;
   document.getElementById("profileGoal").value = data.goal || "Hipertrofia";
@@ -504,37 +467,23 @@ function closeDayEditor() {
 function saveDayEdit() {
   if (editingDayIndex === null) return;
   const routine = getActiveRoutine();
-  const title = document.getElementById("editDayTitle").value.trim() || "Treino";
-  const tag = document.getElementById("editDayTag").value;
-  const exercises = document.getElementById("editDayExercises").value.trim();
-
-  routine.days[editingDayIndex].title = title;
-  routine.days[editingDayIndex].tag = tag;
-  routine.days[editingDayIndex].exercises = exercises;
-
+  routine.days[editingDayIndex].title = document.getElementById("editDayTitle").value.trim() || "Treino";
+  routine.days[editingDayIndex].tag = document.getElementById("editDayTag").value;
+  routine.days[editingDayIndex].exercises = document.getElementById("editDayExercises").value.trim();
   closeDayEditor();
   persist();
-  notify("Dia atualizado na ficha!");
+  notify("Dia atualizado!");
 }
 
 function addFood() {
   const name = document.getElementById("foodName").value.trim();
   const cal = Number(document.getElementById("foodCal").value);
   const pro = Number(document.getElementById("foodProtein").value);
-
-  if (!name || cal < 0 || pro < 0 || !Number.isFinite(cal) || !Number.isFinite(pro)) {
-    notify("Preencha descrição, calorias e proteína corretamente.", true);
+  if (!name || cal < 0 || pro < 0) {
+    notify("Preencha corretamente.", true);
     return;
   }
-
-  data.foods.push({
-    id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
-    name,
-    cal,
-    pro,
-    date: today()
-  });
-
+  data.foods.push({ id: Date.now().toString(36), name, cal, pro, date: today() });
   ["foodName", "foodCal", "foodProtein"].forEach(id => document.getElementById(id).value = "");
   persist();
   notify("Refeição adicionada!");
@@ -543,33 +492,25 @@ function addFood() {
 function deleteFood(id) {
   data.foods = data.foods.filter(x => x.id !== id);
   persist();
-  notify("Registro removido.");
 }
 
 function clearFood() {
-  if (confirm("Apagar todos os registros alimentares de hoje?")) {
+  if (confirm("Limpar registros de hoje?")) {
     data.foods = data.foods.filter(x => x.date !== today());
     persist();
-    notify("Diário de hoje limpo.");
   }
 }
 
 function saveWorkout() {
-  const name = document.getElementById("workoutSelect").value;
-  const note = document.getElementById("workoutNote").value.trim();
-  data.workouts.push({ date: today(), name, note });
+  data.workouts.push({ date: today(), name: document.getElementById("workoutSelect").value, note: document.getElementById("workoutNote").value.trim() });
   document.getElementById("workoutNote").value = "";
   persist();
-  notify("Treino registrado com sucesso!");
+  notify("Treino registrado!");
 }
-if(shouldRotateExercises()){
-   notify(
-      "Novo ciclo disponível. Atualize sua ficha."
-   );
-}
-function deleteWorkout(index) {
-  if (confirm("Remover este registro de treino?")) {
-    data.workouts.splice(index, 1);
+
+function deleteWorkout(i) {
+  if (confirm("Excluir?")) {
+    data.workouts.splice(i, 1);
     persist();
   }
 }
@@ -578,7 +519,7 @@ function addWeight() {
   const v = Number(document.getElementById("weightInput").value);
   const d = document.getElementById("weightDate").value || today();
   if (!v || v < 25 || v > 350) {
-    notify("Informe um peso válido entre 25 kg e 350 kg.", true);
+    notify("Peso inválido.", true);
     return;
   }
   data.weights.push({ value: v, date: d });
@@ -586,17 +527,13 @@ function addWeight() {
   data.weight = data.weights[data.weights.length - 1].value;
   document.getElementById("weightInput").value = "";
   persist();
-  notify("Peso registrado!");
+  notify("Peso salvo!");
 }
 
-function deleteWeight(index) {
-  if (confirm("Excluir este registro de peso?")) {
-    data.weights.splice(index, 1);
-    if (data.weights.length) {
-      data.weight = data.weights[data.weights.length - 1].value;
-    }
-    persist();
-  }
+function deleteWeight(i) {
+  data.weights.splice(i, 1);
+  if (data.weights.length) data.weight = data.weights[data.weights.length - 1].value;
+  persist();
 }
 
 function saveMeasures() {
@@ -604,23 +541,19 @@ function saveMeasures() {
   const chest = document.getElementById("chest").value;
   const arm = document.getElementById("arm").value;
   const thigh = document.getElementById("thigh").value;
-
   if (!waist && !chest && !arm && !thigh) {
-    notify("Preencha pelo menos uma medida.", true);
+    notify("Preencha ao menos uma medida.", true);
     return;
   }
-
   data.measures.push({ waist, chest, arm, thigh, date: today() });
   ["waist", "chest", "arm", "thigh"].forEach(id => document.getElementById(id).value = "");
   persist();
-  notify("Medidas corporais salvas!");
+  notify("Medidas salvas!");
 }
 
-function deleteMeasure(index) {
-  if (confirm("Excluir este registro de medidas?")) {
-    data.measures.splice(index, 1);
-    persist();
-  }
+function deleteMeasure(i) {
+  data.measures.splice(i, 1);
+  persist();
 }
 
 function compressImage(file, maxWidth = 900, quality = 0.78) {
@@ -630,16 +563,10 @@ function compressImage(file, maxWidth = 900, quality = 0.78) {
       const img = new Image();
       img.onload = () => {
         const canvas = document.createElement("canvas");
-        let w = img.width;
-        let h = img.height;
-        if (w > maxWidth) {
-          h = Math.round((h * maxWidth) / w);
-          w = maxWidth;
-        }
-        canvas.width = w;
-        canvas.height = h;
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(img, 0, 0, w, h);
+        let w = img.width, h = img.height;
+        if (w > maxWidth) { h = Math.round((h * maxWidth) / w); w = maxWidth; }
+        canvas.width = w; canvas.height = h;
+        canvas.getContext("2d").drawImage(img, 0, 0, w, h);
         resolve(canvas.toDataURL("image/jpeg", quality));
       };
       img.onerror = reject;
@@ -651,32 +578,25 @@ function compressImage(file, maxWidth = 900, quality = 0.78) {
 }
 
 async function addPhoto() {
-  const input = document.getElementById("photoInput");
-  const f = input.files[0];
+  const f = document.getElementById("photoInput").files[0];
   const d = document.getElementById("photoDate").value || today();
-
-  if (!f) {
-    notify("Selecione uma foto primeiro.", true);
-    return;
-  }
-
+  if (!f) { notify("Selecione uma foto.", true); return; }
   try {
-    notify("Otimizando foto...");
+    notify("Processando foto...");
     const compressed = await compressImage(f);
     data.photos.push({ src: compressed, date: d });
-    input.value = "";
+    document.getElementById("photoInput").value = "";
     persist();
-    notify("Foto salva na galeria!");
+    notify("Foto salva!");
   } catch (e) {
     notify("Erro ao processar imagem.", true);
   }
 }
 
 function deletePhoto(i) {
-  if (confirm("Excluir esta foto permanentemente?")) {
+  if (confirm("Excluir foto?")) {
     data.photos.splice(i, 1);
     persist();
-    notify("Foto excluída.");
   }
 }
 
@@ -692,53 +612,37 @@ function exportData() {
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
   const u = URL.createObjectURL(blob);
   const a = document.createElement("a");
-  a.href = u;
-  a.download = `projeto-shape-backup-${today()}.json`;
-  a.click();
+  a.href = u; a.download = `projeto-shape-backup-${today()}.json`; a.click();
   URL.revokeObjectURL(u);
-  notify("Backup exportado!");
 }
 
 function importData() {
   const f = document.getElementById("importFile").files[0];
-  if (!f) {
-    notify("Escolha um arquivo .json primeiro.", true);
-    return;
-  }
+  if (!f) return;
   const r = new FileReader();
   r.onload = () => {
     try {
-      const parsed = JSON.parse(r.result);
-      data = { ...defaults, ...parsed };
+      data = { ...defaults, ...JSON.parse(r.result) };
       persist();
-      notify("Dados restaurados com sucesso!");
+      notify("Restaurado com sucesso!");
       checkAuth();
-    } catch (e) {
-      notify("Arquivo de backup inválido.", true);
-    }
+    } catch (e) { notify("Erro no arquivo.", true); }
   };
   r.readAsText(f);
 }
 
 function resetData() {
-  if (confirm("ATENÇÃO: Isso apagará todos os seus treinos, fichas, pesos, refeições e fotos deste dispositivo. Continuar?")) {
+  if (confirm("Apagar todos os dados?")) {
     localStorage.clear();
     data = { ...defaults };
     persist();
     checkAuth();
-    notify("Dados apagados.");
   }
 }
-data.exerciseHistory = [];
-data.exerciseHistory.push({
-   date: today(),
-   workout: name
-});
 
 document.getElementById("weightDate").value = today();
 document.getElementById("photoDate").value = today();
 
-// Iniciar verificando autenticação/ativação
 checkAuth();
 
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
